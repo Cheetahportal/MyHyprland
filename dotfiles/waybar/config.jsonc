@@ -1,0 +1,126 @@
+// -*- mode: jsonc -*-
+{
+    "height": 30,
+    "spacing": 8,
+    "modules-left": [
+	    "custom/arch",
+        "custom/dolphin",
+        "custom/steam",
+        "custom/discord",
+	    "custom/spotify",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "custom/cava",
+	    "tray",
+        "pulseaudio",
+        "network",
+        "clock"
+    ],
+
+    "custom/arch": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "Home",
+    "on-click": "wlogout"
+    },
+
+    "custom/steam": {
+        "format": " ",
+        "tooltip": true,
+        "tooltip-format": "Steam",
+        "on-click": "steam"
+    },
+ 
+    "custom/dolphin": {
+        "format": " ",
+        "tooltip": true,
+        "tooltip-format": "Dolphin",
+        "on-click": "dolphin"
+    },
+
+    "custom/spotify": {
+	    "format": " ",
+	    "tooltip": true,
+        "tooltip-format": "Spotify",
+	    "on-click": "spotify"
+    },
+
+    "custom/discord": {
+	    "format": " ",
+	    "tooltipp": true,
+        "tooltip-format": "Discord",
+	    "on-click": "discord"
+    },
+
+    "hyprland/workspaces": {
+	    "format-icons": {
+		    "1": "1",
+		    "2": "2",
+            "3": "3"
+	    },
+        "all-outputs": false,
+        "active-only": true
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": " {format_source}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 5
+    },
+    
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+	"exec": "/home/cheetahportal/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+       	},
+
+    "custom/cava": {
+        "format": "{}",
+        "exec": "/home/cheetahportal/.config/waybar/cava.sh",
+        "return-type": "raw"
+    }
+}
+
+
+    
