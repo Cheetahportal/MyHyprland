@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Shutdown",
+    "icon": "/home/cheetahportal/.config/wlogout/icons/shutdown_white.png",
+    "command": "systemctl poweroff"
+  },
+  {
+    "label": "Restart",
+    "icon": "/usr/share/icons/reboot.png",
+    "command": "systemctl reboot"
+  },
+  {
+    "label": "Sleep",
+    "icon": "/usr/share/icons/suspend.png",
+    "command": "systemctl suspend"
+  }
+]
+
